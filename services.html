@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Services - SysNet Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+<body>
+    
+
+    <header>
+       
+        <h1><span class="highlight">SysNet</span> Pro</h1>
+        <nav>
+            <a href="index.html" >ACCUEIL</a>
+            <a href="about.html" >À PROPOS</a>
+            <a href="services.html" class="btn">SERVICES</a>
+            <a href="contact.html" >CONTACT</a>
+            <a href="login.html" >CONNEXION</a>
+       
+        </nav>
+    </header>
+    
+    
+    <section class="services">
+        <div class="service-box">
+            <i class="fas fa-network-wired"></i>
+            <h2>Infrastructure Réseau</h2>
+            <p>Conception, installation et maintenance de réseaux locaux et étendus.</p>
+            <p class="price">Prix: À partir de 1 500f CFA</p>
+            <a href="devis" class="btn">Demander un devis</a>
+        </div>
+        
+        <div class="service-box">
+            <i class="fas fa-shield-alt"></i>
+            <h2>Sécurité Informatique</h2>
+            <p>Audit de sécurité, protection contre les malwares, firewall, VPN...</p>
+            <p class="price">Prix: À partir de 2 000f CFA</p>
+            <a href="devis" class="btn">Demander un devis</a>
+        </div>
+        
+        <div class="service-box">
+            <i class="fas fa-cloud"></i>
+            <h2>Services Cloud</h2>
+            <p>Migration vers le cloud, solutions SaaS, PaaS et IaaS.</p>
+            <p class="price">Prix: À partir de 1 200f CFA/mois</p>
+            <a href="devis" class="btn">Demander un devis</a>
+        </div>
+    </section>
+
+    <section id="devis" class="devis">
+        <h2>Demander un devis</h2>
+        <form id="contactForm">
+            <input type="text" name="nom" placeholder="Nom" required>
+            <input type="email" name="email" placeholder="Adresse Email" required>
+            <textarea name="message" placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+            <p id="confirmation" class="hidden">Votre demande a bien été envoyée !</p>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            document.getElementById("confirmation").classList.remove("hidden");
+            setTimeout(() => {
+                document.getElementById("confirmation").classList.add("hidden");
+            }, 3000);
+        });
+    </script>
+</body>
+
+<footer>
+    <p>SysNet Pro, Copyright &copy; 2023</p>
+</footer>
+</html>
+
+
+
